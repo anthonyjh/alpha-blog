@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Webpage!</title>
+
+  <style>
+   body {
+	  background-color: #e6f7ff
+   }
+   img {
+	  width:50%;
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+   }
+   h1 {
+	  color: blue;
+   }
+   div.container p, h1 {
+	  position: relative;
+	  text-align: center;
+   }
+   footer {
+	  position: absolute;
+	  margin: 0;
+	  bottom: 0;
+	  height: -20px;
+	  width: 100%;
+   }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div id="landingImg">
+    <!--<img src="landingImg.jpg" alt="Mountain Lake"/> -->
+    <%= image_tag('landingImg', :alt => 'Mountain Lake') %>
+  </div>
+  <div class="content text-center">
+    <h1>Welcome To My Webpage!</h1>
+  
+    <p>This is a simple landing page for my website. </p>
+    <p>Thanks for takin' a look!</p>
+    <br/>
+    <p>Check out the "About" page as well! <br/>
+      <%= link_to 'About', about_path %>
+    </p>
+  </div>
+  <footer>
+    <p>Posted by: Anthony Hual</p>
+    <p>Contact information: 
+      <a href="mailto:blufirenator@gmail.com">blufirenator@gmail.com</a>.
+    </p>
+</footer>
+</div>
+</body>
+</html>
