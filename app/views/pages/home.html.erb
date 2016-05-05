@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+ 
   <title>My Webpage!</title>
 
   <style>
    body {
-	  background-color: #e6f7ff
+	  background-color: #e6f7ff !important;
    }
    img {
 	  width:50%;
@@ -21,14 +22,16 @@
 	  text-align: center;
    }
    footer {
-	  position: absolute;
-	  margin: 0;
-	  bottom: 0;
-	  height: -20px;
+	  position: fixed;
+	  margin: 0, auto;
+	  bottom: 0px;
 	  width: 100%;
+	  text-align: center;
    }
   </style>
+  
 </head>
+
 <body>
 <div class="container">
   <div id="landingImg">
@@ -45,12 +48,12 @@
       <%= link_to 'About', about_path %>
     </p>
   </div>
-  <footer>
+  <footer align = "center">
     <p>Posted by: Anthony Hual</p>
     <p>Contact information: 
       <a href="mailto:blufirenator@gmail.com">blufirenator@gmail.com</a>.
     </p>
-</footer>
+  </footer>
 </div>
 </body>
 </html>
