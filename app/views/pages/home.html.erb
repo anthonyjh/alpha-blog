@@ -1,62 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
- 
-  <title>My Webpage!</title>
-
-  <style>
-   body {
-	  background-color: #e6f7ff !important;
-   }
-   img {
-	  width:50%;
-	  display: block;
-	  margin-left: auto;
-	  margin-right: auto;
-   }
-   h1 {
-	  color: blue;
-   }
-   div.container p, h1 {
-	  position: relative;
-	  text-align: center;
-   }
-   footer {
-	  position: fixed;
-	  margin: 0, auto;
-	  bottom: 0px;
-	  width: 100%;
-	  text-align: center;
-   }
-  </style>
+<div class="center jumbotron" >
   
-</head>
-
-<body>
-<div class="container">
-  <div id="landingImg">
-    <!--<img src="landingImg.jpg" alt="Mountain Lake"/> -->
-    <%= image_tag('landingImg', :alt => 'Mountain Lake') %>
-  </div>
-  <div class="content text-center">
-    <h1>Welcome To My Webpage!</h1>
+  <h1>ALPHA BLOG</h1>
+  <%= link_to "Sign up now", "#", class: "btn btn-primary btn-large" %>
   
-    <p>This is a simple landing page for my website. </p>
-    <p>Thanks for takin' a look!</p>
-    <br/>
-    <p>Check out the "About" page as well! <br/>
-      <%= link_to 'About', about_path %>
-    </p>
-    <br/>
-    <p>View Alpha Blog <br/>
-      <%= link_to 'Alpha Blog', articles_path %></p>
-  </div>
-  <footer align = "center">
-    <p>Posted by: Anthony Hual</p>
-    <p>Contact information: 
-      <a href="mailto:blufirenator@gmail.com">blufirenator@gmail.com</a>.
-    </p>
-  </footer>
 </div>
-</body>
-</html>
