@@ -21,6 +21,11 @@ $navbar-default-bg: black;
    text-align: center;
 }
 
+
+.navbar-collapse ul li a {
+   color: black;
+}
+
 .jumbotron {
    background-image: asset-url('background.jpg');
    background-size: cover;
@@ -43,6 +48,7 @@ $navbar-default-bg: black;
 
 footer {
    margin-top: 10px;
+   padding-left: 15px;
    padding-top: 5px;
    border-top: 1px solid #eaeaea;
    color: #7777777;
@@ -58,6 +64,7 @@ footer small {
 
 footer ul {
    float: right;
+   padding-right: 15px;
    list-style: none;
 }
 
