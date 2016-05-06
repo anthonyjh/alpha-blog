@@ -1,44 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
- 
-  <title>My Webpage!</title>
-
-  <style>
-   body {
-	  background-color: #e6f7ff !important;
-   }
-   img {
-	  width:50%;
-	  display: block;
-	  margin-left: auto;
-	  margin-right: auto;
-   }
-   h1 {
-	  color: blue;
-   }
-   div.container p, h1 {
-	  position: relative;
-	  text-align: center;
-   }
-   footer {
-	  position: fixed;
-	  margin: 0, auto;
-	  bottom: 0px;
-	  width: 100%;
-	  text-align: center;
-   }
-   table {
-      text-align: left !important;
-   }
-   th {
-      text-decoration: underline; 
-   }
-  </style>
-  
-</head>
-
-<body>
 <div class="container">
   <div id="landingImg">
     <!--<img src="landingImg.jpg" alt="Mountain Lake"/> -->
@@ -58,7 +17,7 @@
       </tr>
    
       <% @articles.each do |article| %>
-        <tr>
+        <tr align="left">
           <td><%= article.title %></td>
           <td><%= article.description %></td>
           <td><%= link_to "Edit", edit_article_path(article) %></td>
@@ -70,5 +29,3 @@
 
    </div>
 </div>
-</body>
-</html>
