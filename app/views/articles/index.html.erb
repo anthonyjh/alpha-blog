@@ -1,22 +1,74 @@
-<h1>Listing all articles</h1>
+<!DOCTYPE html>
+<html>
+<head>
+ 
+  <title>My Webpage!</title>
 
-<p> 
-   <%= link_to "Create new article", new_article_path %>
-</p>
+  <style>
+   body {
+	  background-color: #e6f7ff !important;
+   }
+   img {
+	  width:50%;
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+   }
+   h1 {
+	  color: blue;
+   }
+   div.container p, h1 {
+	  position: relative;
+	  text-align: center;
+   }
+   footer {
+	  position: fixed;
+	  margin: 0, auto;
+	  bottom: 0px;
+	  width: 100%;
+	  text-align: center;
+   }
+   table {
+      text-align: left !important;
+   }
+   th {
+      text-decoration: underline; 
+   }
+  </style>
+  
+</head>
 
-<table>
+<body>
+<div class="container">
+  <div id="landingImg">
+    <!--<img src="landingImg.jpg" alt="Mountain Lake"/> -->
+    <%= image_tag('landingImg', :alt => 'Mountain Lake') %>
+  </div>
+  <div class="content text-center">
+   <h1>Listing all articles</h1>
+
+   <p> 
+      <%= link_to "Home", root_path %> | <%= link_to "Create new article", new_article_path %>
+   </p>
+   <br/>
+   <table style="margin: 0px auto;">
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+      </tr>
    
-   <tr>
-      <th>Title</th>
-      <th>Description</th>
-   </tr>
-   
-   <% @articles.each do |article| %>
-   <tr>
-      <td><%= article.title %></td>
-      <td><%= article.description %></td>
-      <td><%= link_to "Edit", edit_article_path(article) %></td>
-      <td><%= link_to "Show", article_path(article) %></td>
-   </tr>
-   <% end %>
-</table>
+      <% @articles.each do |article| %>
+        <tr>
+          <td><%= article.title %></td>
+          <td><%= article.description %></td>
+          <td><%= link_to "Edit", edit_article_path(article) %></td>
+          <td><%= link_to "Show", article_path(article) %></td>
+          <td><%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"} %></td>
+        </tr>
+      <% end %>
+   </table>
+
+   </div>
+</div>
+</body>
+</html>
