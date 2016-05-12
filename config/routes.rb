@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   
   resources :articles  #gives us a new article path
+  
+  get 'signup', to: 'users#new'
+  resources :users, except: [:new] #because new is already routed in the line above
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
