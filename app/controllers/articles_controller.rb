@@ -14,13 +14,13 @@ class ArticlesController < ApplicationController
    end
    
    def edit
-      set_article
+      
    end
    
    def create
       #render plain: params[:article].inspect
       @article = Article.new(article_params)
-      @user = current_user
+      @article.user = current_user
       if @article.save
         #do something
         flash[:success] = "Article was successfully created!"
