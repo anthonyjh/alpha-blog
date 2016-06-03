@@ -60,7 +60,7 @@ class ArticlesController < ApplicationController
       
       def article_params
          #top-level key article, permit title and description as input values
-         params.require(:article).permit(:title, :description)
+         params.require(:article).permit(:title, :description, category_ids: [])
       end
       
       def require_same_user
