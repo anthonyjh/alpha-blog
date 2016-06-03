@@ -41,10 +41,20 @@ $navbar-default-bg: black;
 }
 
 .jumbotron h1 {
-   color: #f2f2f2;
+   color: white;
+   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
    text-align: center;
-   margin-top: 460px;
-   margin-bottom: 50px;
+   margin-top: 150px;
+   letter-spacing: -1px;
+   font-weight: bold;
+}
+
+.jumbotron h2 {
+   color: white;
+   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+   text-align: center;
+   padding-top: -20px;
+   margin-bottom: 30px;
    letter-spacing: -1px;
    font-weight: bold;
 }
